@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics 1st Paper</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbxTdoyiqHMl-kFoTNKWHEO5_8_IV6VLBz31Uxq0Xu_IWbn7VKT8rxNBAPJvXb5bkLfg/exec"
-            style="width: 100%; height: 100vh; border: none;"></iframe>
+    <iframe 
+        id="appFrame"
+        src="https://script.google.com/macros/s/AKfycbxCnbYI8b88wqpt8xxG9Q0Rl1Kq2SYbkNiuFJmWOOHXxVxNTA-1rdm_JX2sNThILmHRqw/exec?embedded=true"
+        sandbox="allow-scripts allow-same-origin">
+    </iframe>
+
+    <script>
+        setInterval(() => {
+            const iframe = document.getElementById('appFrame');
+            iframe.src = iframe.src;
+        }, 15000); // 15000 milliseconds = 15 seconds
+    </script>
 </body>
 </html>
